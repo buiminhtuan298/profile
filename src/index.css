@@ -5,12 +5,14 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 /* ----------------------- PHONE ----------------------- */
 .iphone {
   border: 4px solid #3b444b;
   border-radius: 50px;
+  position: relative;
 }
 
 .iphone-14 {
@@ -20,6 +22,29 @@
   background-image: url("https://raw.githubusercontent.com/zouraiz523/iphone-14-pro-max/main/Phone%2014%20Pro%20Max%20and%20Dynamic%20Island/img-bg.webp");
   background-repeat: no-repeat;
   border-radius: 47px;
+}
+
+.boder-iphone {
+  border-radius: 50px;
+  border: 4px solid #3b444b;
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    10% 100%,
+    10% 1%,
+    90% 1%,
+    99% 5%,
+    99% 95%,
+    90% 99.5%,
+    10% 99.5%,
+    1% 95%,
+    10% 100%,
+    100% 100%,
+    100% 0%
+  );
 }
 
 .operator-name,
@@ -34,6 +59,7 @@
   border-radius: 50px;
   position: relative;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .dynamic-island::before {
@@ -138,4 +164,12 @@ i {
   background: #75757565;
   accent-color: #fff;
   -webkit-appearance: none;
+}
+
+#bars {
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
 }
